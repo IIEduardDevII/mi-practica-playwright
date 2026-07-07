@@ -27,6 +27,11 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
+    //Aqui estamos configurando el navegador para que se abra en modo no headless, es decir, que se vea la interfaz del navegador mientras se ejecutan las pruebas.
+    headless: false,
+
+    //Aqui estamos configurando las capturas de pantalla para que se tomen automáticamente cuando una prueba falle. Esto es útil para depurar problemas en las pruebas.
+    screenshot: 'only-on-failure',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
